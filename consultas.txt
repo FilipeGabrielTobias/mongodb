@@ -1,0 +1,23 @@
+// Busca todos os documentos na collection
+db.nomeDaCollection.find()
+
+// Busca todos os documentos na collection formatado
+db.nomeDaCollection.find().pretty()
+
+// Busca o primeiro registro
+db.nomeDaCollection.findOne()
+
+// Busca o registro baseado no filtro passado
+db.nomeDaCollection.findOne({month: 1})
+
+// Busca os registros passando um OU
+db.nomeDaCollection.find({$or: [{month: 1}, {month: 2}]})
+
+// Busca os registros com um determinado documento possui o atributo
+db.nomeDaCollection.find({credits:{$exists:true}})
+
+// pula o primeiro registro
+db.nomeDaCollection.find({year:2017}).skip(1)
+
+// busca somente a quantidade de registros passada
+db.nomeDaCollection.find({year:2017}).limit(1)

@@ -1,0 +1,13 @@
+// Insere o valor na collection, caso nao exista a collection automaticamente ele cria a collection
+db.nomeDaCollection.insert({
+    name: "Teste",
+    month: 1,
+    year: 2021
+})
+
+// Insere o valor na collection, caso nao exista a collection automaticamente ele cria a collection
+db.nomeDaCollection.save({
+    name: "Teste",
+    month: 1,
+    year: 2021
+})

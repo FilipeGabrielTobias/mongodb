@@ -1,0 +1,17 @@
+// Mostra os banco de dados
+show dbs
+
+// Começa a usar a base escolhida, caso ela não exista irá criar apenas em memória
+use nome_base
+
+// Mostra a base utilizada no momento
+db 
+
+// Cria uma collection na base corrente
+db.createCollection('nomeDaCollection')
+
+// Mostra todas as collections da base
+show collections
+
+// Remove a collection
+db.nomeDaCollection.drop()
