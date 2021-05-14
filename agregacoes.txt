@@ -1,0 +1,21 @@
+// $project extrai somente o que te interessa e passa pra frente
+// $group cria grupos para agrupar os documentos 
+db.nomeDaCollection.aggregate([{
+    $project:{
+        credit: {
+            $sum:"$credits.value"
+        },
+        debt: {
+            $sum:"debts.value"
+        }
+    },
+    $group: {
+        _id: null,
+        credit: {
+            $sum:"$credit"
+        },
+        debt: {
+            $sum:"$debt"
+        }
+    }
+}])

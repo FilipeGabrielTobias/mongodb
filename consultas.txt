@@ -21,3 +21,5 @@ db.nomeDaCollection.find({year:2017}).skip(1)
 
 // busca somente a quantidade de registros passada
 db.nomeDaCollection.find({year:2017}).limit(1)
+
+db.nomeDaCollection.find({credits:{$exists:true}}, {_id:0, name:1})

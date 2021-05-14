@@ -1,0 +1,6 @@
+db.nomeDaCollection.remove({month:2})
+
+// Exclui apenas 1 mesmo que o parametro abrange mais documentos
+db.nomeDaCollection.remove({year:2017}, 1)
+
+db.dropDataBase()

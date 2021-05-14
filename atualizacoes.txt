@@ -1,0 +1,12 @@
+// Atualiza as informações
+db.nomeDaCollection.update(
+    {$and: [
+        {month: 1},
+        {year: 2017}
+    ]},
+    {$set: {
+        credits: [
+            {name:"Salário", value:5000}
+        ]
+    }}
+)

@@ -15,3 +15,6 @@ show collections
 
 // Remove a collection
 db.nomeDaCollection.drop()
+
+// Faz o count de quantos documentos tem na collection
+db.nomeDaCollection.count()
